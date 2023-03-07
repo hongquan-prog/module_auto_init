@@ -19,7 +19,6 @@ void mod_init(void)
     
     for (func = (init_fn_t *)&_mod_init_fn_start; func < (init_fn_t *)&_mod_init_fn_end; func ++)
     {
-        printf("%p\r\n", *func);
         (*func)();
     }
 #endif

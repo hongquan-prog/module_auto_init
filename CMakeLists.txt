@@ -7,11 +7,12 @@ set(CMAKE_C_COMPILER gcc)
 project(module LANGUAGES C)
 
 # c sources
-aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/module C_SOURCES)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/driver C_SOURCES)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/src C_SOURCES)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/interface C_SOURCES)
 
 # c includes
-set(C_INCLUDES ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(C_INCLUDES ${CMAKE_CURRENT_SOURCE_DIR}/src ${CMAKE_CURRENT_SOURCE_DIR}/interface)
 
 # ld
 set(LD_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/link.ld)
