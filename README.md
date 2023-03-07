@@ -53,10 +53,12 @@ iwdg_inface_t *bsp_iwdg_inface_get(void);
 
 static void prv_iwdg_init(iwdg_inface_t *obj)
 {
+    printf("iwdg init\r\n");
 }
 
 static void prv_iwdg_reload(iwdg_inface_t *obj)
 {
+    printf("iwdg reload\r\n");
 }
 
 iwdg_inface_t *prv_iwdg_inface_get(void)
